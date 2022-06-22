@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../scripts/calculos.js"></script>
+    <link rel="stylesheet" href="../css/index.css"> 
+
+</head>
+
+<body>
+    <input type="number" id="n1" placeholder="Informe numero">
+    <input type="number" id="n2" placeholder="Informe numero">
+    <div class="dropdown">
+        <button class="dropbtn">Calculos</button>
+        <div class="dropdown-content">
+            <button onclick="calcular()">Somar</button>
+            <button onclick="diminuir()">Diminuir</button>
+            <button onclick="multiplica()">Multiplicar</button>
+            <button onclick="divide()">Divisão</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        function calcular() {
+            var n1 = parseInt(document.getElementById("n1").value)
+            var n2 = parseInt(document.getElementById("n2").value)
+            var retorno = somar(n1, n2)
+            alert(retorno)
+        }
+
+        function diminuir() {
+            var n1 = parseInt(document.getElementById("n1").value)
+            var n2 = parseInt(document.getElementById("n2").value)
+            var retorno = subtrair(n1, n2)
+            alert(retorno)
+        }
+        function multiplica() {
+            var n1 = parseInt(document.getElementById("n1").value)
+            var n2 = parseInt(document.getElementById("n2").value)
+            var retorno = multiplicar(n1, n2)
+            alert(retorno)
+        }
+        function divide() {
+            var n1 = parseInt(document.getElementById("n1").value)
+            var n2 = parseInt(document.getElementById("n2").value)
+            var retorno = dividir(n1, n2)
+            alert(retorno)
+        }
+
+
+
+    </script>
+</body>
+
+</html>
